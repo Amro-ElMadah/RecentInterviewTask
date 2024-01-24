@@ -3,7 +3,6 @@ package com.hellofresh.task1.data
 import com.hellofresh.task1.data.model.Menu
 import com.hellofresh.task1.data.model.Recipe
 import com.hellofresh.task1.data.model.Subscription
-import java.util.Date
 
 class FakeData {
 
@@ -17,5 +16,5 @@ class FakeData {
     )
 
     private fun getSubscription() =
-        Subscription(0, Date(), false)
+        Subscription(0, "Wednesday", false)
 }

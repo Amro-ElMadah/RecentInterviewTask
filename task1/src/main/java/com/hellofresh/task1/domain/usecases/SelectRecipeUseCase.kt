@@ -7,9 +7,7 @@ import com.hellofresh.task1.domain.repository.MenuRepository
 class SelectRecipeUseCase(private val repository: MenuRepository) {
     fun build(
         recipe: Recipe,
-        menu: Menu,
     ) = repository.selectRecipe(
         recipe = recipe,
-        menu = menu,
     )
 }

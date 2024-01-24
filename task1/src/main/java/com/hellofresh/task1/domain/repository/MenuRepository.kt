@@ -4,13 +4,15 @@ import com.hellofresh.task1.data.model.Menu
 import com.hellofresh.task1.data.model.Recipe
 
 interface MenuRepository {
-    fun getAvailableRecipes(): List<Recipe>
+    fun getMenu(): Menu
 
-    fun selectRecipe(recipe: Recipe, menu: Menu)
+    fun selectRecipe(recipe: Recipe)
+
+    fun selectMultipleRecipes(recipes: List<Recipe>)
 
     fun unSelectRecipe(recipe: Recipe)
 
-    fun unSelectRecipes(recipes: List<Recipe>)
+    fun unSelectMultipleRecipes(recipes: List<Recipe>)
 
     fun getSelectedRecipesCount(): Int
 

@@ -8,16 +8,24 @@ import com.hellofresh.task1.domain.repository.MenuRepository
 class MenuRepositoryImp(
     private val menuDataSource: MenuDataSource,
 ) : MenuRepository {
-    override fun getAvailableRecipes(): List<Recipe> =
-        menuDataSource.getAvailableRecipes()
+    override fun getMenu(): Menu =
+        menuDataSource.getMenu()
 
     override fun selectRecipe(
         recipe: Recipe,
-        menu: Menu,
     ) {
         menuDataSource.selectRecipe(
             recipe = recipe,
-            menu = menu,
+            menu = getMenu(),
+        )
+    }
+
+    override fun selectMultipleRecipes(
+        recipes: List<Recipe>,
+    ) {
+        menuDataSource.selectMultipleRecipes(
+            recipes = recipes,
+            menu = getMenu(),
         )
     }
 
@@ -25,8 +33,8 @@ class MenuRepositoryImp(
         menuDataSource.unselectRecipe(recipe = recipe)
     }
 
-    override fun unSelectRecipes(recipes: List<Recipe>) {
-        menuDataSource.unselectRecipes(recipes = recipes)
+    override fun unSelectMultipleRecipes(recipes: List<Recipe>) {
+        menuDataSource.unselectMultipleRecipes(recipes = recipes)
     }
 
     override fun getSelectedRecipesCount(): Int =
@@ -35,5 +43,5 @@ class MenuRepositoryImp(
     override fun getSelectedRecipes(): List<Recipe> = menuDataSource.getSelectedRecipes()
 
     override fun getRecipesWithTag(tag: String): List<Recipe> =
-        getRecipesWithTag(tag = tag)
+        menuDataSource.getRecipesWithTag(tag = tag, availableRecipes =  menuDataSource.getMenu().recipes)
 }
