@@ -8,6 +8,7 @@ hiltAndroid = "2.48"
 coroutinesVersion = "1.7.1"
 jetbrains-kotlinxCoroutinesTest = "1.7.1"
 kotlinxCoroutinesTest = "1.5.2"
+lifecycleViewmodelCompose = "2.7.0"
 material = "1.4.0-beta01"
 mockk = "1.12.0"
 retrofitVersion = "2.9.0"
@@ -30,6 +31,7 @@ androidx-activity-compose-v182 = { module = "androidx.activity:activity-compose"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-espresso-core-3_4_0-alpha05 = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-espressoCore" }
 androidx-junit-1_1_3 = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
