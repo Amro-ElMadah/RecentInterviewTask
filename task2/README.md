@@ -15,6 +15,8 @@
     - Extension: The .kts extension indicates that the file contains Kotlin script code. This is in contrast to the traditional build.gradle files, which are written in Groovy.
     - Gradle DSL (Domain-Specific Language): The build script is written in a DSL provided by Gradle. This DSL allows you to define tasks, dependencies, plugins, and other aspects of your build configuration.
 
+Time consumed : 3 hrs.
+
 # Testing Strategies:
 - The happy scenario : Stable internet, open the app spinner for loading will be shown up till the data is fetched from the api then the list of recipes will be shown and the spinner will disappear.
 - No internet : Just disconnect your internet on the device and the loading api will be called and then there'll be a returned error which represents that no internet.
